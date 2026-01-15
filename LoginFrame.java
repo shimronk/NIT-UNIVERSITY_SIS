@@ -84,7 +84,7 @@ public class LoginFrame extends JFrame {
 
         try (Connection con = DBConnection.getConnection()) {
 
-            // ================= ADMIN LOGIN =================
+            //  ADMIN LOGIN 
             if (role.equals("Admin")) {
 
                 String sql = "SELECT * FROM admin WHERE username=? AND password=?";
@@ -103,7 +103,7 @@ public class LoginFrame extends JFrame {
 
             }
 
-            // ================= STUDENT LOGIN =================
+            // STUDENT LOGIN 
             else {
 
                 String sql = "SELECT student_id FROM students WHERE student_id=? AND password=?";
@@ -135,3 +135,5 @@ public class LoginFrame extends JFrame {
         }
     }
 }
+
+
